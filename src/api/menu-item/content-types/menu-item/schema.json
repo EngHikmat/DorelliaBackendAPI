@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_items",
+  "info": {
+    "singularName": "menu-item",
+    "pluralName": "menu-items",
+    "displayName": "Menu Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "Description": {
+      "type": "text",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "Price": {
+      "type": "decimal",
+      "max": 9999,
+      "min": 0,
+      "default": 0
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    },
+    "Combotype": {
+      "type": "enumeration",
+      "enum": [
+        "starter",
+        "lunch",
+        "dessert"
+      ]
+    }
+  }
+}

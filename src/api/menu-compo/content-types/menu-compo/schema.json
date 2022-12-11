@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_compos",
+  "info": {
+    "singularName": "menu-compo",
+    "pluralName": "menu-compos",
+    "displayName": "Menu Compo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "Description": {
+      "type": "text",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "Price": {
+      "type": "decimal",
+      "default": 0,
+      "max": 999,
+      "min": 0
+    },
+    "Color": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Combotype": {
+      "type": "enumeration",
+      "enum": [
+        "starter",
+        "lunch",
+        "dessert"
+      ]
+    }
+  }
+}
